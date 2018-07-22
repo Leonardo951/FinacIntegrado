@@ -27,7 +27,7 @@ export default class Profile extends Component {
         return (
             <div className="container">
                 <div className="span3 well text-center">
-                    <img src={this.props.FotoProfile} style={{width: this.props.widthImg, height: this.props.heightImg, borderRadius: '75px'}} className="img-circle"/>
+                    <img src={this.props.FotoProfile} style={{width: this.props.widthImg, height: this.props.heightImg, borderRadius: '75px'}} className="img-circle" alt='Foto de perfil'/>
                     <h3 style={{fontSize: this.props.tamNome}}>{this.props.usuario}</h3>
                     <em>O que deseja fazer?</em>
                     <div className="well text-center">

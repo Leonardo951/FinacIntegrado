@@ -21,7 +21,7 @@ export default class MenuPrincipal extends Component {
     }
 
     InserirSalario() {
-        if(this.state.NewSalario == 'block' && this.state.itemAtivo) {
+        if(this.state.NewSalario === 'block' && this.state.itemAtivo) {
             this.setState ({
                 NewSalario: 'none',
                 itemAtivo: false
@@ -37,7 +37,7 @@ export default class MenuPrincipal extends Component {
     }
 
     InserirEmprestimo() {
-        if(this.state.NewEmprestimo == 'block' && this.state.itemAtivo) {
+        if(this.state.NewEmprestimo === 'block' && this.state.itemAtivo) {
             this.setState ({
                 NewEmprestimo: 'none',
                 itemAtivo: false
@@ -53,7 +53,7 @@ export default class MenuPrincipal extends Component {
     }
 
     InserirCartao() {
-        if(this.state.NewCartao == 'block' && this.state.itemAtivo) {
+        if(this.state.NewCartao === 'block' && this.state.itemAtivo) {
             this.setState ({
                 NewCartao: 'none',
                 itemAtivo: false
@@ -65,7 +65,6 @@ export default class MenuPrincipal extends Component {
                 NewCartao: 'block',
                 itemAtivo: true
             });
-            document.getElementById('meutopo').click();
         }
     }
 

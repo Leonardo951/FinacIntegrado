@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import HomeCard from '../HomeCard';
-
 export default class ModificacaoDados extends Component {
 
     Fechar(e){
@@ -33,7 +31,7 @@ export default class ModificacaoDados extends Component {
                     <div className="form-group col-md-6">
                         <label htmlFor="inputSexo">Sexo</label>
                         <select id="inputSexo" className="form-control">
-                            <option selected>Selecione...</option>
+                            <option defaultValue='selecione'>Selecione...</option>
                             <option>Feminino</option>
                             <option>Masculino</option>
                             <option>Outros</option>

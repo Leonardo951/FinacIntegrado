@@ -22,7 +22,7 @@ export default class NovoSalario extends Component {
                         <label htmlFor="fonteSal" className="col-sm-2 col-form-label">Fonte </label>
                         <div className="col-sm-10">
                             <select id="fonteSal" name="fonte" className="form-control">
-                                <option selected>Selecione...</option>
+                                <option defaultValue='selecione'>Selecione...</option>
                                 <option>Emprego 2</option>
                                 <option>Frella</option>
                             </select>
@@ -43,8 +43,8 @@ export default class NovoSalario extends Component {
                     <div className="form-group">
                         <div className="col-sm-offset-2 col-sm-10">
                             <div className="pull-right">
-                                <button type="submit" className="btn btn-danger" onClick={this.CancelarSalario.bind(this)}>Cancelar</button>
-                                <button type="submit" className="btn btn-success" onSubmit={this.SalvaSalario.bind(this)}>Salvar</button>
+                                <button type="submit" className="btn btn-danger  btn-sm" onClick={this.CancelarSalario.bind(this)}>Cancelar</button>
+                                <button type="submit" className="btn btn-success  btn-sm" onSubmit={this.SalvaSalario.bind(this)}>Salvar</button>
                             </div>
                         </div>
                     </div>

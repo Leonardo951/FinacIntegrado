@@ -25,7 +25,7 @@ export default class CartaoCredito extends Component {
 
     OpcaoCartao(e) {
         // Trazer os dados para coocar nos campos e depois mostrar
-        if(this.state.escolhido || e.target.value != 'selecione'){
+        if(this.state.escolhido || e.target.value !== 'selecione'){
             this.setState({
                 escolhido: false
             })
@@ -71,7 +71,7 @@ export default class CartaoCredito extends Component {
                         <label htmlFor="fonteEmp" className="col-sm-3 col-form-label">Selecione um cartão </label>
                         <div className="col-sm-8">
                             <select id="fonteEmp" className="form-control" disabled={this.state.novo} onChange={this.OpcaoCartao.bind(this)}>
-                                <option value='selecione' selected>Selecione...</option>
+                                <option defaultValue='selecione'>Selecione...</option>
                                 <option value="bb">BB (visa)</option>
                                 <option value="nubank">Nubank</option>
                                 <option value="caixa">CAIXA</option>
@@ -97,8 +97,8 @@ export default class CartaoCredito extends Component {
                     <div className="form-group">
                         <div className="col-sm-offset-2 col-sm-10">
                             <div className="pull-right">
-                                <button type="submit" className="btn btn-danger" onClick={this.CancelarCartao.bind(this)}>Cancelar</button>
-                                <button type="submit" className="btn btn-success" onSubmit={this.SalvaCartao.bind(this)}>Salvar</button>
+                                <button type="submit" className="btn btn-danger btn-sm" onClick={this.CancelarCartao.bind(this)}>Cancelar</button>
+                                <button type="submit" className="btn btn-success btn-sm" onSubmit={this.SalvaCartao.bind(this)}>Salvar</button>
                             </div>
                         </div>
                     </div>

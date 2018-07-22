@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import MinhaMeta from './MinhaMeta';
+import MinhaMeta from './Metas/MinhaMeta';
 
 export default class Metas extends Component {
 

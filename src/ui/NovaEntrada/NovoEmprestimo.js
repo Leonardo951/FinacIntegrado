@@ -16,19 +16,19 @@ export default class NovoEmprestimo extends Component {
     }
 
     OpcaoFonte(e){
-        if(e.target.value == 'banco'){
+        if(e.target.value === 'banco'){
             this.setState({
                 optionParente: 'none',
                 optionBanco: 'block',
                 optionOutro: 'none',
             })
-        }else if(e.target.value == 'parente'){
+        }else if(e.target.value === 'parente'){
             this.setState({
                 optionBanco: 'none',
                 optionParente: 'block',
                 optionOutro: 'none',
             })
-        }else if(e.target.value == 'outro'){
+        }else if(e.target.value === 'outro'){
             this.setState({
                 optionBanco: 'none',
                 optionParente: 'none',
@@ -64,7 +64,7 @@ export default class NovoEmprestimo extends Component {
                         <label htmlFor="fonteEmp" className="col-sm-2 col-form-label">Fonte </label>
                         <div className="col-sm-10">
                             <select id="fonteEmp" name="fonte" className="form-control" onChange={this.OpcaoFonte.bind(this)}>
-                                <option selected>Selecione...</option>
+                                <option defaultValue='selecione'>Selecione...</option>
                                 <option value="banco">Banco (pessoal)</option>
                                 <option value="banco">Banco (consignado)</option>
                                 <option value="parente">Amigos ou Parente</option>
@@ -78,8 +78,8 @@ export default class NovoEmprestimo extends Component {
                     <div className="form-group">
                         <div className="col-sm-offset-2 col-sm-10">
                             <div className="pull-right">
-                                <button type="submit" className="btn btn-danger" onClick={this.CancelarEmprestimo.bind(this)}>Cancelar</button>
-                                <button type="submit" className="btn btn-success" onSubmit={this.SalvaEmprestimo.bind(this)}>Salvar</button>
+                                <button type="submit" className="btn btn-danger btn-sm" onClick={this.CancelarEmprestimo.bind(this)}>Cancelar</button>
+                                <button type="submit" className="btn btn-success btn-sm" onSubmit={this.SalvaEmprestimo.bind(this)}>Salvar</button>
                             </div>
                         </div>
                     </div>

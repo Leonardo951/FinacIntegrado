@@ -27,7 +27,7 @@ export default class Dashboard extends Component {
     }
 
     AlterarDados() {
-        if(this.state.optionDados == 'block' && this.state.itemAtivo) {
+        if(this.state.optionDados === 'block' && this.state.itemAtivo) {
             this.setState ({
                 optionDados: 'none',
                 btnVerde: "btn btn-fresh text-uppercase btn-sm",
@@ -53,7 +53,7 @@ export default class Dashboard extends Component {
     }
 
     AlterarMetas() {
-        if(this.state.optionMetas == 'block' && this.state.itemAtivo) {
+        if(this.state.optionMetas === 'block' && this.state.itemAtivo) {
             this.setState ({
                 optionMetas: 'none',
                 btnAzul: "btn btn-sky text-uppercase btn-sm",
@@ -79,7 +79,7 @@ export default class Dashboard extends Component {
     }
 
     ModificaSenha(){
-        if(this.state.optionSenhas == 'block' && this.state.itemAtivo) {
+        if(this.state.optionSenhas === 'block' && this.state.itemAtivo) {
             this.setState ({
                 optionSenhas: 'none',
                 btnVerde: "btn btn-fresh text-uppercase btn-sm",
@@ -105,7 +105,7 @@ export default class Dashboard extends Component {
     }
 
     ExcluirConta() {
-        if(this.state.optionExcluirConta == 'block' && this.state.itemAtivo) {
+        if(this.state.optionExcluirConta === 'block' && this.state.itemAtivo) {
             this.setState ({
                 optionExcluirConta: 'none',
                 btnVerde: "btn btn-fresh text-uppercase btn-sm",

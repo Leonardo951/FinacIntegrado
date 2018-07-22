@@ -31,7 +31,7 @@ export default class EmpBanco extends Component {
                     <div className="form-group col-md-6">
                         <label htmlFor="jurosEmp">Calculo do juros</label>
                         <select id="jurosEmp" name="jurosEmp" className="form-control" onChange={this.OpcaoTaxa.bind(this)}>
-                            <option value='%' selected>Taxa de Juros (% ao mês)</option>
+                            <option defaultValue='%'>Taxa de Juros (% ao mês)</option>
                             <option value='%'>Taxa de Juros (% ao ano)</option>
                             <option value='R$'>Valor final</option>
                             <option value='R$'>Valor do Juros</option>
