@@ -15,7 +15,7 @@ export default class EmpOutro extends Component {
                     <input type="text" className="form-control" id="inlineFormInputGroupDate2"/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="infoEmp">Informação (opcional)</label>
+                    <label htmlFor="infoEmp">Informação <small style={{color: '#A9A9A9'}}>(opcional)</small></label>
                     <textarea className="form-control" id="infoEmp" rows="3" maxLength='100'/>
                 </div>
             </div>

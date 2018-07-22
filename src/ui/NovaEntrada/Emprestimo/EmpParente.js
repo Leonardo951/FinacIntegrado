@@ -26,12 +26,12 @@ export default class EmpParente extends Component {
         return (
             <div style={{display: this.props.optionParente}}>
                 <div className="form-group col-md-6">
-                    <label htmlFor="inlineFormInputValor2">Valor</label>
-                    <input type="text" className="form-control" id="inlineFormInputValor2"/>
+                    <label htmlFor="inlineFormInputValor3">Valor</label>
+                    <input type="text" className="form-control" id="inlineFormInputValor3"/>
                 </div>
                 <div className="form-group col-md-6">
-                    <label htmlFor="inlineFormInputGroupDate2">Data</label>
-                    <input type="text" className="form-control" id="inlineFormInputGroupDate2"/>
+                    <label htmlFor="inlineFormInputGroupDate3">Data</label>
+                    <input type="text" className="form-control" id="inlineFormInputGroupDate3"/>
                 </div>
                 <div id="optionParente">
                     <div className="form-group col-md-6">

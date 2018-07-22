@@ -158,6 +158,8 @@ export default class Dashboard extends Component {
                        altMeta={this.AlterarMetas.bind(this)}/>
                 <ExcluirConta ExcluirConta={this.state.optionExcluirConta}
                               FuncaoExcluirConta={this.ExcluirConta.bind(this)}/>
+
+                <br/><br/>
             </div>
         );
     }

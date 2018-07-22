@@ -29,15 +29,15 @@ export default class NovoSalario extends Component {
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label className="col-sm-2 col-form-label" htmlFor="inlineFormInputValor2">Valor</label>
+                        <label className="col-sm-2 col-form-label" htmlFor="inlineFormInputValor5">Valor</label>
                         <div className="col-sm-10">
-                            <input type="text" className="form-control" id="inlineFormInputValor2"/>
+                            <input type="text" className="form-control" id="inlineFormInputValor5"/>
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label className="col-sm-2 col-form-label" htmlFor="inlineFormInputGroupDate2">Data</label>
+                        <label className="col-sm-2 col-form-label" htmlFor="inlineFormInputGroupDate5">Data</label>
                         <div className="col-sm-10">
-                            <input type="text" className="form-control" id="inlineFormInputGroupDate2"/>
+                            <input type="text" className="form-control" id="inlineFormInputGroupDate5"/>
                         </div>
                     </div>
                     <div className="form-group">

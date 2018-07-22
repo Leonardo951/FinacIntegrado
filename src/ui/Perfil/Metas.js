@@ -9,14 +9,17 @@ export default class Metas extends Component {
         this.state = ({
             metas: [
                 {
+                    id: 1,
                     meta: 'Comprar um helicoptero',
                     valor: '1.000.000'
                 },
                 {
+                    id: 2,
                     meta: 'Comprar um carro',
                     valor: '100.000'
                 },
                 {
+                    id: 3,
                     meta: 'Casamento',
                     valor: '60.000'
                 },
@@ -28,6 +31,7 @@ export default class Metas extends Component {
 
     InsereMeta(e){
         let valor = {
+            id: 1 + this.state.metas.id,
             meta: this[`NewMeta`].value,
             valor: this[`ValMeta`].value
         };
@@ -40,6 +44,15 @@ export default class Metas extends Component {
         this.setState({
             inserir: 'none',
             botaoNovo: true
+        })
+    }
+
+    handleDelete(id){
+        let indice = this.state.metas.find(item => item.id === id);
+        let array = [...this.state.metas];
+        array.splice(indice, 1);
+        this.setState({
+            metas: array
         })
     }
 
@@ -94,15 +107,22 @@ export default class Metas extends Component {
                         </tr>
                         </thead>
                         <tbody>
-                        {this.state.metas.map((m, index) => {
-                                return (
-                                    <MinhaMeta key={index} meta={m.meta} valor={m.valor}/>
-                                )
-                            }
-                        )
+                        {
+                            this.state.metas.map((m, index) => {
+                            return (
+                            <MinhaMeta key={index} meta={m.meta} valor={m.valor} idMeta={m.id} handleDelete={this.handleDelete.bind(this)}/>
+                            )})
                         }
                         </tbody>
                     </table>
+                    {
+                        this.state.metas.length < 1 ?
+                        <div className="alert alert-warning text-center" role="alert">
+                            Você ainda não definiu metas a realizar
+                        </div>
+                            :
+                        <div/>
+                    }
                 </div>
             </div>
         );

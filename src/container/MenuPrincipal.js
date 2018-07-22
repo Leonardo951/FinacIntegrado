@@ -5,6 +5,7 @@ import {Link} from 'react-router';
 import NovoSalario from '../ui/NovaEntrada/NovoSalario';
 import NovoEmprestimo from '../ui/NovaEntrada/NovoEmprestimo';
 import CartaoCredito from '../ui/NovaEntrada/CartaoCredito';
+import OutraEntrada from '../ui/NovaEntrada/OutraEntrada';
 
 export default class MenuPrincipal extends Component {
 
@@ -13,6 +14,7 @@ export default class MenuPrincipal extends Component {
         super();
         this.state = {
             NewSalario: 'none',
+            NewOutra: 'none',
             NewEmprestimo: 'none',
             NewCartao: 'none',
             itemAtivo: false,
@@ -28,8 +30,6 @@ export default class MenuPrincipal extends Component {
             });
         }else if(!this.state.itemAtivo){
             this.setState ({
-                NewCartao: 'none',
-                NewEmprestimo: 'none',
                 NewSalario: 'block',
                 itemAtivo: true
             });
@@ -44,9 +44,21 @@ export default class MenuPrincipal extends Component {
             });
         }else if(!this.state.itemAtivo){
             this.setState ({
-                NewCartao: 'none',
-                NewSalario: 'none',
                 NewEmprestimo: 'block',
+                itemAtivo: true
+            });
+        }
+    }
+
+    InserirOutraEntrada() {
+        if(this.state.NewOutra === 'block' && this.state.itemAtivo) {
+            this.setState ({
+                NewOutra: 'none',
+                itemAtivo: false
+            });
+        }else if(!this.state.itemAtivo){
+            this.setState ({
+                NewOutra: 'block',
                 itemAtivo: true
             });
         }
@@ -104,7 +116,7 @@ export default class MenuPrincipal extends Component {
                                 <a className="dropdown-item" onClick={this.InserirSalario.bind(this)}>Salário</a>
                                 <a className="dropdown-item" onClick={this.InserirEmprestimo.bind(this)}>Empréstimo</a>
                                 <a className="dropdown-item" onClick={this.InserirCartao.bind(this)}>Cartão de crédito</a>
-                                <a className="dropdown-item">Outro</a>
+                                <a className="dropdown-item" onClick={this.InserirOutraEntrada.bind(this)}>Outra forma</a>
                             </div>
                         </li>
                     </ul>
@@ -120,6 +132,8 @@ export default class MenuPrincipal extends Component {
                               CancelaEmprestimo={this.InserirEmprestimo.bind(this)}/>
                 <CartaoCredito NewCartao={this.state.NewCartao}
                                 CancelaCartao={this.InserirCartao.bind(this)}/>
+                <OutraEntrada NewOutra={this.state.NewOutra}
+                                InserirOutra={this.InserirOutraEntrada.bind(this)}/>
             </div>
 
         )}

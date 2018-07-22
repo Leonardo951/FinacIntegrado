@@ -7,6 +7,16 @@ export default class ModificacaoDados extends Component {
         this.props.altDados();
     }
 
+    ValidaImg(e){
+        let ext = e.target.value.substring(e.target.value.lastIndexOf('.') + 1);
+
+        if(ext === "JPEG" || ext === "JPG" || ext === "PNG" || ext === "jpeg" || ext === "jpg" || ext === "png"){
+            return true;
+        }else{
+            e.target.value = '';
+        }
+    }
+
     render() {
         return (
         <div className='container' style={{display: this.props.optionDados}}>
@@ -37,6 +47,11 @@ export default class ModificacaoDados extends Component {
                             <option>Outros</option>
                         </select>
                     </div>
+                    <div className="form-group">
+                        <label htmlFor="FormControlFile1">Foto de perfil</label>
+                        <input type="file" className="form-control-file" id="FormControlFile1" accept="image/png, image/jpeg" onChange={this.ValidaImg.bind(this)}/>
+                    </div>
+                    <br/>
                 </div>
                 <button type="submit" className="btn btn-primary btn-sm">Salvar</button>
                 <button type="reset" className="btn btn-secundary btn-sm" onClick={this.Fechar.bind(this)}>Fechar</button>

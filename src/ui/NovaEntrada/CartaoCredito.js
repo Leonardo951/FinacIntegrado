@@ -68,9 +68,9 @@ export default class CartaoCredito extends Component {
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label htmlFor="fonteEmp" className="col-sm-3 col-form-label">Selecione um cartão </label>
+                        <label htmlFor="SelectCartao" className="col-sm-3 col-form-label">Selecione um cartão </label>
                         <div className="col-sm-8">
-                            <select id="fonteEmp" className="form-control" disabled={this.state.novo} onChange={this.OpcaoCartao.bind(this)}>
+                            <select id="SelectCartao" className="form-control" disabled={this.state.novo} onChange={this.OpcaoCartao.bind(this)}>
                                 <option defaultValue='selecione'>Selecione...</option>
                                 <option value="bb">BB (visa)</option>
                                 <option value="nubank">Nubank</option>

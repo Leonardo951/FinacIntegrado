@@ -17,9 +17,14 @@ export default class MinhaMeta extends Component {
         })
     }
 
+    RemoverLinha(id){
+        this.props.handleDelete(id);
+
+    }
+
     render(){
         return (
-            <tr className={this.state.myClass} style={{textAlign: 'center'}}>
+            <tr className={this.state.myClass} style={{textAlign: 'center'}} key={this.props.idMeta}>
                 <td>{this.props.meta}</td>
                 <td>{this.props.valor}</td>
                 <td style={{width: '200px'}}>
@@ -31,7 +36,7 @@ export default class MinhaMeta extends Component {
                     </select>
                 </td>
                 <td className='text-center'>
-                    <button type="button" className="btn btn-danger btn-sm">Remover</button>
+                    <button type="button" className="btn btn-danger btn-sm" onClick={this.RemoverLinha.bind(this, this.props.idMeta)}>Remover</button>
                 </td>
             </tr>
         );

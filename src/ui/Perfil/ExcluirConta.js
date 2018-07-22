@@ -12,8 +12,8 @@ export default class ExcluirConta extends Component {
             <div className='container' style={{display: this.props.ExcluirConta}}>
                 <form style={{border: 'double #df6a78', marginTop: '-10px', padding: '10px', borderRadius: '10px'}}>
                     <div className="form-group">
-                        <label htmlFor="inputNome4">Por que está nos deixando?</label>
-                        <textarea className="form-control" id="inputNome4" maxLength='200'/>
+                        <label htmlFor="inputMotivo">Por que está nos deixando?</label>
+                        <textarea className="form-control" id="inputMotivo" maxLength='200'/>
                         <br/>
                         <small style={{color: 'red', width: '100%'}}>Importante: Está ação não poderá ser desfeita!</small>
                         <div className='pull-right'>

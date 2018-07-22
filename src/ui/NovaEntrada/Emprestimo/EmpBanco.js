@@ -20,12 +20,12 @@ export default class EmpBanco extends Component {
         return (
             <div style={{display: this.props.optionBanco}}>
                 <div className="form-group col-md-6">
-                    <label htmlFor="inlineFormInputValor2">Valor</label>
-                    <input type="text" className="form-control" id="inlineFormInputValor2"/>
+                    <label htmlFor="inlineFormInputValor4">Valor</label>
+                    <input type="text" className="form-control" id="inlineFormInputValor4"/>
                 </div>
                 <div className="form-group col-md-6">
-                    <label htmlFor="inlineFormInputGroupDate2">Data</label>
-                    <input type="text" className="form-control" id="inlineFormInputGroupDate2"/>
+                    <label htmlFor="inlineFormInputGroupDate4">Data</label>
+                    <input type="text" className="form-control" id="inlineFormInputGroupDate4"/>
                 </div>
                 <div id="optionTaxas">
                     <div className="form-group col-md-6">
