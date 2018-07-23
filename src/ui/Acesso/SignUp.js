@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import {Link} from 'react-router';
 import Banner from './Banner';
+import TermosCondicoes from './TermosCondicoes';
+
 import './acesso.css';
 
 export default class SignUp extends Component {
@@ -108,43 +110,8 @@ export default class SignUp extends Component {
                         </div>
                         <Banner/>
                     </div>
-                    <div className="modal fade" id="t_and_c_m" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div className="modal-dialog modal-lg">
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <button type="button" className="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 className="modal-title" id="myModalLabel">Termos e Condições</h4>
-                                </div>
-                                <div className="modal-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi,
-                                        aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi
-                                        tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi,
-                                        aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi
-                                        tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi,
-                                        aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi
-                                        tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi,
-                                        aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi
-                                        tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi,
-                                        aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi
-                                        tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi,
-                                        aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi
-                                        tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi,
-                                        aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi
-                                        tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-                                </div>
-                                <div className="modal-footer">
-                                    <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={this.Selecionar.bind(this)}>Eu aceito</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                <TermosCondicoes aceitar={this.Selecionar.bind(this)}/>
             </div>
         );
     }
