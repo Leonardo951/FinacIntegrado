@@ -130,15 +130,16 @@ export default class Dashboard extends Component {
         }
     }
 
-    NomeDoUsuario = {
+    InfosDoUsuario = {
         usuario: 'Paul: ET',
         FotoProfile: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R"
+        // FotoProfile: "http://ssl.gstatic.com/accounts/ui/avatar_2x.png"
     };
 
     render(){
         return (
-            <div>
-                <Profile {...this.NomeDoUsuario} altDados={this.AlterarDados.bind(this)}
+            <div>   
+                <Profile {...this.InfosDoUsuario} altDados={this.AlterarDados.bind(this)}
                          altSenha={this.ModificaSenha.bind(this)}
                          altMeta={this.AlterarMetas.bind(this)}
                          ExcluirConta={this.ExcluirConta.bind(this)}

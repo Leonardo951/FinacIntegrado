@@ -6,6 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import Dashboard from "./container/Dashboard";
 import Perfil from "./container/Perfil";
+import Login from './container/Login';
+import Registrar from './container/Registrar';
 
 ReactDOM.render(
     <Router history={hashHistory}>
@@ -13,5 +15,7 @@ ReactDOM.render(
             <IndexRoute component={Dashboard} />
             <Route path="/perfil" component={Perfil} />
         </Route>
+        <Route path='/Login' component={Login} />
+        <Route path='/Registrar' component={Registrar} />
     </Router>, document.getElementById('root'));
 registerServiceWorker();

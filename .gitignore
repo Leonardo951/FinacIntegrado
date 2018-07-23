@@ -25,3 +25,6 @@ yarn-error.log*
 
 # intelljidea
 .idea
+
+# vcs
+vcs.xml
