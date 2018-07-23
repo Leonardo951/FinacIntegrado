@@ -39,8 +39,11 @@ export default class SignUp extends Component {
             <div style={{width: '100%', height: '100%', background: '#2c3e50', top: '0', left: '0', position: 'absolute'}}>
                 <div className="container">
                     <div className="row" style={{background: '#D3D3D3', borderRadius: '10px', marginTop: '5em'}}>
-                        <div className="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3" style={{padding: '2em'}}>
-                            <form role="form" style={{background: '#fff', borderRadius: '10px', padding: '2em'}}>
+                        <div style={{padding: '0px 5px'}}>
+                            <Banner/>
+                        </div>
+                        <div className="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3" style={{padding: '2em 10px'}}>
+                            <form style={{background: '#fff', borderRadius: '10px', padding: '2em'}}>
                                 <h2>Faça seu cadastro</h2>
                                 <hr className="colorgraph"/>
                                 <div className="form-group">
@@ -108,7 +111,6 @@ export default class SignUp extends Component {
                                 </div>
                             </form>
                         </div>
-                        <Banner/>
                     </div>
                 </div>
                 <TermosCondicoes aceitar={this.Selecionar.bind(this)}/>

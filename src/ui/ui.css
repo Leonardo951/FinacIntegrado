@@ -129,9 +129,9 @@ li a.activer {
     }
 }
 
-.point {
-    cursor: pointer;
-}
+/*.point {*/
+    /*cursor: pointer;*/
+/*}*/
 
 .text-decoration {
     text-decoration: none;
@@ -209,9 +209,9 @@ h4 {
     box-sizing: border-box;
 }
 
-.point {
-    cursor: pointer;
-}
+/*.point {*/
+    /*cursor: pointer;*/
+/*}*/
 
 .fa {
     display: inline-block;
