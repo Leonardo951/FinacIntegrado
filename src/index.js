@@ -8,14 +8,16 @@ import Dashboard from "./container/Dashboard";
 import Perfil from "./container/Perfil";
 import Login from './container/Login';
 import Registrar from './container/Registrar';
+import Compras from './container/Compras';
 
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path='/' component={App}>
             <IndexRoute component={Dashboard} />
             <Route path="/perfil" component={Perfil} />
+            <Route path="/compras" component={Compras} />
         </Route>
-        <Route path='/Login' component={Login} />
-        <Route path='/Registrar' component={Registrar} />
+        <Route path='/login' component={Login} />
+        <Route path='/registrar' component={Registrar} />
     </Router>, document.getElementById('root'));
 registerServiceWorker();

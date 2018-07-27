@@ -19,7 +19,6 @@ export default class MinhaMeta extends Component {
 
     RemoverLinha(id){
         this.props.handleDelete(id);
-
     }
 
     render(){

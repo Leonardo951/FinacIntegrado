@@ -104,7 +104,7 @@ export default class SignUp extends Component {
                                         <input type="submit" value="Registrar" disabled={this.state.habilitaBotao} className="btn btn-success btn-block btn-lg btn-sm" tabIndex="7"/>
                                     </div>
                                     <div className="col-xs-12 col-md-6">
-                                        <Link to={'/Login'}>
+                                        <Link to={'/login'}>
                                             <a href="" className="btn btn-primary btn-block btn-lg btn-sm">Voltar ao login</a>
                                         </Link>
                                     </div>

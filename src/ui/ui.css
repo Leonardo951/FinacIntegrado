@@ -522,7 +522,7 @@ h2{
     border-bottom:2px solid #098aa9;
 }
 
-.btn-sky:hover,.btn-sky.active:focus, .btn-sky:focus, .open>.dropdown-toggle.btn-sky {
+.btn-sky:hover,.btn-sky.active:focus, .btn-sky:focus, .open >.dropdown-toggle.btn-sky {
     color: #fff;
     background-color: #29b6d8;
     border-bottom:2px solid #2192ad;
@@ -544,5 +544,10 @@ h2{
     outline-offset: 0px;
 }
 
-a {color:#fff;}
-a:hover {text-decoration:none; color:#fff;}
+a {
+    color:#fff;
+}
+
+a:hover {
+    text-decoration:none; color:#fff;
+}

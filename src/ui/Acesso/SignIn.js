@@ -64,7 +64,7 @@ export default class SignIn extends Component {
                                                    value="Entrar"/>
                                         </div>
                                         <div className="col-xs-6 col-sm-6 col-md-6">
-                                            <Link to={'/Registrar'}>
+                                            <Link to={'/registrar'}>
                                                 <a href="" className="btn btn-lg btn-primary btn-block btn-sm">Desejo me registrar</a>
                                             </Link>
                                         </div>

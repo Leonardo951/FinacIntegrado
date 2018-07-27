@@ -96,13 +96,13 @@ export default class MenuPrincipal extends Component {
                     <Link to='/' className="navbar-brand" title='Voltar ao dashboard'>{this.state.logo}</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"/>
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                        <ul className="navbar-nav mr-auto">
+                        <ul className="navbar-nav mr-auto"  style={{cursor: 'default'}}>
                             <li className="nav-item">
-                                <a className="nav-link">Relatórios</a>
+                                <a className="nav-link disabled">Relatórios</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link disabled">Novidades</a>
@@ -127,13 +127,16 @@ export default class MenuPrincipal extends Component {
                                     <a className="dropdown-item" onClick={this.InserirOutraEntrada.bind(this)}>Outra forma</a>
                                 </div>
                             </li>
+                            <li className="nav-item">
+                                <Link to={'/compras'} className="nav-link">Nova compra</Link>
+                            </li>
                         </ul>
                         {/*<form className="form-inline my-2 my-lg-0">*/}
                         {/*<input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"/>*/}
                         {/*<button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>*/}
                         {/*</form>*/}
                         <ul className="nav navbar-nav navbar-right">
-                            <li className="dropdown"><a href="" className="dropdown-toggle" data-toggle="dropdown">
+                            <li className="dropdown"><a href="" className="dropdown-toggle" data-toggle="dropdown" style={{cursor: 'default'}}>
                                 {this.InfosDoUsuario.usuario}
                                 <b className="caret"/></a>
                                 <ul className="dropdown-menu dropdown-menu-right">

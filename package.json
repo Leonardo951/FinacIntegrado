@@ -9,7 +9,9 @@
     "react-dom": "^16.4.1",
     "react-router": "^3.2.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-select": "^2.0.0",
+    "react-select-plus": "^1.0.0-rc.3.patch7"
   },
   "scripts": {
     "start": "react-scripts start",
