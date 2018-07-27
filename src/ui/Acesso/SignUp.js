@@ -94,7 +94,7 @@ export default class SignUp extends Component {
 				                    </span>
                                     <small className="col-xs-8 col-sm-9 col-md-9">
                                         Você concorda com os
-                                        <a href="#t_and_c_m" data-toggle="modal" className='btn-link'> Termos e Condições </a>
+                                        <a data-toggle="modal" data-target="#t_and_c_m" className='btn-link'> Termos e Condições </a>
                                         estabelecidos por este site, incluindo o uso de cookies?
                                     </small>
                                 </div>

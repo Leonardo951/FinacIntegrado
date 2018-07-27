@@ -123,7 +123,7 @@ export default class MenuPrincipal extends Component {
                                 <div className="dropdown-menu" aria-labelledby="dropdown01">
                                     <a className="dropdown-item" onClick={this.InserirSalario.bind(this)}>Salário</a>
                                     <a className="dropdown-item" onClick={this.InserirEmprestimo.bind(this)}>Empréstimo</a>
-                                    <a className="dropdown-item" onClick={this.InserirCartao.bind(this)}>Cartão de crédito</a>
+                                    <a className="dropdown-item"  data-toggle="modal" data-target="#cartaocredito">Cartão de crédito</a>
                                     <a className="dropdown-item" onClick={this.InserirOutraEntrada.bind(this)}>Outra forma</a>
                                 </div>
                             </li>
@@ -181,8 +181,7 @@ export default class MenuPrincipal extends Component {
                              CancelaSalario={this.InserirSalario.bind(this)}/>
                 <NovoEmprestimo NewEmprestimo={this.state.NewEmprestimo}
                                 CancelaEmprestimo={this.InserirEmprestimo.bind(this)}/>
-                <CartaoCredito NewCartao={this.state.NewCartao}
-                               CancelaCartao={this.InserirCartao.bind(this)}/>
+                <CartaoCredito/>
                 <OutraEntrada NewOutra={this.state.NewOutra}
                               InserirOutra={this.InserirOutraEntrada.bind(this)}/>
             </div>
