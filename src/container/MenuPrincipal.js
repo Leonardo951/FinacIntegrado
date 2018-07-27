@@ -121,10 +121,10 @@ export default class MenuPrincipal extends Component {
                                 <a className="nav-link dropdown-toggle" id="dropdown01"
                                    data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Nova Entrada</a>
                                 <div className="dropdown-menu" aria-labelledby="dropdown01">
-                                    <a className="dropdown-item" onClick={this.InserirSalario.bind(this)}>Salário</a>
-                                    <a className="dropdown-item" onClick={this.InserirEmprestimo.bind(this)}>Empréstimo</a>
-                                    <a className="dropdown-item"  data-toggle="modal" data-target="#cartaocredito">Cartão de crédito</a>
-                                    <a className="dropdown-item" onClick={this.InserirOutraEntrada.bind(this)}>Outra forma</a>
+                                    <a className="dropdown-item" data-toggle="modal" data-target="#novosalario">Salário</a>
+                                    <a className="dropdown-item" data-toggle="modal" data-target="#novoemprestimo">Empréstimo</a>
+                                    <a className="dropdown-item" data-toggle="modal" data-target="#cartaocredito">Cartão de crédito</a>
+                                    <a className="dropdown-item" data-toggle="modal" data-target="#outraentrada">Outra forma</a>
                                 </div>
                             </li>
                             <li className="nav-item">
@@ -177,13 +177,10 @@ export default class MenuPrincipal extends Component {
                         </ul>
                     </div>
                 </nav>
-                <NovoSalario NewSalario={this.state.NewSalario}
-                             CancelaSalario={this.InserirSalario.bind(this)}/>
-                <NovoEmprestimo NewEmprestimo={this.state.NewEmprestimo}
-                                CancelaEmprestimo={this.InserirEmprestimo.bind(this)}/>
-                <CartaoCredito/>
-                <OutraEntrada NewOutra={this.state.NewOutra}
-                              InserirOutra={this.InserirOutraEntrada.bind(this)}/>
+                <NovoSalario />
+                <NovoEmprestimo />
+                <CartaoCredito />
+                <OutraEntrada />
             </div>
 
         )}

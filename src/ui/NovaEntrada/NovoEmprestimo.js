@@ -44,46 +44,44 @@ export default class NovoEmprestimo extends Component {
 
     }
 
-    CancelarEmprestimo(e){
-        e.preventDefault();
-        this.props.CancelaEmprestimo();
-    }
-
-    SalvaEmprestimo(e){
-        e.preventDefault();
-        this.props.CancelaEmprestimo();
-    }
-
     render() {
 
         return (
-            <div className="container" style={{display: this.props.NewEmprestimo}}>
-                <form style={{background: '#F5F5DC', padding: '10px 20px 40px 15px', borderRadius: '10px'}}>
-                    <h4 style={{fontFamily: 'Tahoma, Geneva, sans-serif', fontWeight: 'bold'}}>NOVO EMPRÉSTIMO</h4>
-                    <div className="form-group row">
-                        <label htmlFor="fonteEmp" className="col-sm-2 col-form-label">Fonte </label>
-                        <div className="col-sm-10">
-                            <select id="fonteEmp" name="fonte" className="form-control" onChange={this.OpcaoFonte.bind(this)}>
-                                <option defaultValue='selecione'>Selecione...</option>
-                                <option value="banco">Banco (pessoal)</option>
-                                <option value="banco">Banco (consignado)</option>
-                                <option value="parente">Amigos ou Parente</option>
-                                <option value="outro">Outros</option>
-                            </select>
+            <div className="modal fade" id="novoemprestimo" tabIndex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 style={{fontWeight: 'bold'}}>NOVO EMPRÉSTIMO</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div className="modal-body">
+                            <form>
+                                <div className="form-group row">
+                                    <label htmlFor="fonteEmp" className="col-sm-2 col-form-label">Fonte </label>
+                                    <div className="col-sm-10">
+                                        <select id="fonteEmp" name="fonte" className="form-control" onChange={this.OpcaoFonte.bind(this)}>
+                                            <option defaultValue='selecione'>Selecione...</option>
+                                            <option value="banco">Banco (pessoal)</option>
+                                            <option value="banco">Banco (consignado)</option>
+                                            <option value="parente">Amigos ou Parente</option>
+                                            <option value="outro">Outros</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <EmpParente optionParente={this.state.optionParente}/>
+                                <EmpBanco optionBanco={this.state.optionBanco}/>
+                                <EmpOutro optionOutro={this.state.optionOutro}/>
+                            </form>
+                        </div>
+                        <div className="modal-footer">
+                            <button type="reset" className="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" className="btn btn-primary">Salvar</button>
                         </div>
                     </div>
-                    <EmpParente optionParente={this.state.optionParente}/>
-                    <EmpBanco optionBanco={this.state.optionBanco}/>
-                    <EmpOutro optionOutro={this.state.optionOutro}/>
-                    <div className="form-group">
-                        <div className="col-sm-offset-2 col-sm-10">
-                            <div className="pull-right">
-                                <button type="submit" className="btn btn-danger btn-sm" onClick={this.CancelarEmprestimo.bind(this)}>Cancelar</button>
-                                <button type="submit" className="btn btn-success btn-sm" onSubmit={this.SalvaEmprestimo.bind(this)}>Salvar</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         );
     }

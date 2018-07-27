@@ -2,49 +2,48 @@ import React, { Component } from 'react';
 
 export default class OutraEntrada extends Component {
 
-    CancelarOutra(e){
-        e.preventDefault();
-        this.props.InserirOutra();
-    }
-
-    SalvaOutra(e){
-        e.preventDefault();
-        this.props.InserirOutra();
-    }
-
     render() {
 
         return (
-            <div className="container" style={{display: this.props.NewOutra}}>
-                <form style={{background: '#F5F5DC', padding: '10px 20px 40px 15px', borderRadius: '10px'}}>
-                    <h4 style={{fontFamily: 'Tahoma, Geneva, sans-serif', fontWeight: 'bold'}}>NOVA ENTRADA</h4>
-                    <div className="form-group row">
-                        <label className="col-sm-2 col-form-label" htmlFor="inlineFormInputValor">Valor</label>
-                        <div className="col-sm-10">
-                            <input type="text" className="form-control" id="inlineFormInputValor"/>
+
+            <div className="modal fade" id="outraentrada" tabIndex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 style={{fontWeight: 'bold'}}>OUTRA FORMA DE ENTRADA</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div className="modal-body">
+                            <form>
+                                <div className="form-group row">
+                                    <label className="col-sm-2 col-form-label" htmlFor="inlineFormInputValor">Valor</label>
+                                    <div className="col-sm-10">
+                                        <input type="text" className="form-control" id="inlineFormInputValor"/>
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label className="col-sm-2 col-form-label" htmlFor="inlineFormInputGroupDate">Data</label>
+                                    <div className="col-sm-10">
+                                        <input type="text" className="form-control" id="inlineFormInputGroupDate"/>
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label className="col-sm-2 col-form-label" htmlFor="infoOut">Observação <small style={{color: '#A9A9A9'}}>(opcional)</small></label>
+                                    <div className="col-sm-10">
+                                        <textarea className="form-control" id="infoOut" rows="3" maxLength='100'/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div className="modal-footer">
+                            <button type="reset" className="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" className="btn btn-primary">Salvar</button>
                         </div>
                     </div>
-                    <div className="form-group row">
-                        <label className="col-sm-2 col-form-label" htmlFor="inlineFormInputGroupDate">Data</label>
-                        <div className="col-sm-10">
-                            <input type="text" className="form-control" id="inlineFormInputGroupDate"/>
-                        </div>
-                    </div>
-                    <div className="form-group row">
-                        <label className="col-sm-2 col-form-label" htmlFor="infoOut">Observação <small style={{color: '#A9A9A9'}}>(opcional)</small></label>
-                        <div className="col-sm-10">
-                            <textarea className="form-control" id="infoOut" rows="3" maxLength='100'/>
-                        </div>
-                    </div>
-                    <div className="form-group">
-                        <div className="col-sm-offset-2 col-sm-10">
-                            <div className="pull-right">
-                                <button type="submit" className="btn btn-danger  btn-sm" onClick={this.CancelarOutra.bind(this)}>Cancelar</button>
-                                <button type="submit" className="btn btn-success  btn-sm" onSubmit={this.SalvaOutra.bind(this)}>Salvar</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         );
     }
